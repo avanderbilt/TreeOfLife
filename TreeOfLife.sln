@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeOfLife.Model", "TreeOfLife.Model\TreeOfLife.Model.csproj", "{A76F5516-82A7-461A-83A8-936E08E227AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeOfLife.Data", "TreeOfLife.Data\TreeOfLife.Data.csproj", "{FEE19452-B345-4BE6-A77D-059922EEDD29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeOfLife.Cli", "TreeOfLife.Cli\TreeOfLife.Cli.csproj", "{F25A535B-A254-409E-BC93-03AFCB4BEE09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeOfLife.Logic", "TreeOfLife.Logic\TreeOfLife.Logic.csproj", "{9833DA7E-CD4C-41FC-9D84-FC1F254113CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeOfLife.ExtensionMethods", "TreeOfLife.ExtensionMethods\TreeOfLife.ExtensionMethods.csproj", "{F12C0C61-95B4-407F-81C6-1157637885CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A76F5516-82A7-461A-83A8-936E08E227AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A76F5516-82A7-461A-83A8-936E08E227AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A76F5516-82A7-461A-83A8-936E08E227AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A76F5516-82A7-461A-83A8-936E08E227AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE19452-B345-4BE6-A77D-059922EEDD29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE19452-B345-4BE6-A77D-059922EEDD29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE19452-B345-4BE6-A77D-059922EEDD29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE19452-B345-4BE6-A77D-059922EEDD29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F25A535B-A254-409E-BC93-03AFCB4BEE09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25A535B-A254-409E-BC93-03AFCB4BEE09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25A535B-A254-409E-BC93-03AFCB4BEE09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25A535B-A254-409E-BC93-03AFCB4BEE09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9833DA7E-CD4C-41FC-9D84-FC1F254113CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9833DA7E-CD4C-41FC-9D84-FC1F254113CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9833DA7E-CD4C-41FC-9D84-FC1F254113CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9833DA7E-CD4C-41FC-9D84-FC1F254113CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F12C0C61-95B4-407F-81C6-1157637885CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12C0C61-95B4-407F-81C6-1157637885CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12C0C61-95B4-407F-81C6-1157637885CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12C0C61-95B4-407F-81C6-1157637885CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
