@@ -9,5 +9,7 @@ namespace TreeOfLife.Model.Interfaces
         IEnumerable<Planet> Planets { get; }
         IEnumerable<Sephira> Sephiroth { get; }
         IEnumerable<ZodiacSign> ZodiacSigns { get; }
+        IEnumerable<Element> Elements { get; }
+        IEnumerable<Metal> Metals { get; }
     }
 }

@@ -8,13 +8,15 @@ namespace TreeOfLife.Logic
     {
         public Tree(IHebrewLetterRepository hebrewLetterRepository, ISephiraRepository sephiraRepository,
             IPlanetRepository planetRepository, IZodiacSignRepository zodiacSignRepository,
-            IPathRepository pathRepository)
+            IPathRepository pathRepository, IElementRepository elementRepository, IMetalRepository metalRepository)
         {
             Paths = pathRepository.ReadAll();
             Sephiroth = sephiraRepository.ReadAll();
             HebrewLetters = hebrewLetterRepository.ReadAll();
             Planets = planetRepository.ReadAll();
             ZodiacSigns = zodiacSignRepository.ReadAll();
+            Elements = elementRepository.ReadAll();
+            Metals = metalRepository.ReadAll();
         }
 
         public IEnumerable<HebrewLetter> HebrewLetters { get; }
@@ -22,5 +24,7 @@ namespace TreeOfLife.Logic
         public IEnumerable<Planet> Planets { get; }
         public IEnumerable<Sephira> Sephiroth { get; }
         public IEnumerable<ZodiacSign> ZodiacSigns { get; }
+        public IEnumerable<Element> Elements { get; }
+        public IEnumerable<Metal> Metals { get; }
     }
 }

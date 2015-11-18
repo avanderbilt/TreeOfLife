@@ -1,4 +1,6 @@
-﻿namespace TreeOfLife.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TreeOfLife.Model
 {
     public class Sephira : Entity
     {
@@ -9,8 +11,11 @@
             Number = number;
         }
 
+        [Display(Name = "Sephira")]
         public string Name { get; set; }
+        [Display(Name = "Sephira Meaning")]
         public string Meaning { get; set; }
+        [Display(Name = "Sephira Number")]
         public int Number { get; }
 
         public override string ToString()

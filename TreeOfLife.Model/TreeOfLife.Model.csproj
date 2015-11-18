@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PlanetWithMetal.cs" />
+    <Compile Include="Interfaces\IMetalRepository.cs" />
+    <Compile Include="Metal.cs" />
     <Compile Include="Element.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="HebrewLetter.cs" />

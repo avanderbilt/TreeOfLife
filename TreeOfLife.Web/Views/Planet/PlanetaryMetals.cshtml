@@ -1,0 +1,38 @@
+﻿@model IEnumerable<TreeOfLife.Model.PlanetWithMetal>
+
+@{
+    ViewBag.Title = "PlanetaryMetals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PlanetaryMetals</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Planet.Glyph)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Planet.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Metal.Name)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Planet.Glyph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Planet.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Metal.Name)
+            </td>
+        </tr>
+    }
+
+</table>

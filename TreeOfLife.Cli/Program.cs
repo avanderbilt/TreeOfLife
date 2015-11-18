@@ -17,16 +17,7 @@ namespace TreeOfLife.Cli
 
         static Program()
         {
-            RecreateDatabase();
-
-            //return;
-
             IKernel kernel = new StandardKernel(new LogicModule(), new DataModule());
-
-            var elementRepository = kernel.Get<IElementRepository>();
-            var elements = elementRepository.ReadAll().ToList();
-
-            return;
 
             Tree = kernel.Get<ITree>();
 
@@ -122,11 +113,35 @@ namespace TreeOfLife.Cli
             Console.Out.WriteLine("* \"zodiac\" or \"signs\"");
             Console.Out.WriteLine("* \"sephiroth\"");
             Console.Out.WriteLine("* \"paths\"");
+            Console.Out.WriteLine("* \"elements\"");
+            Console.Out.WriteLine("* \"metals\"");
+        }
+
+        [Command("elements")]
+        private static void PrintElements(params string[] options)
+        {
+            Console.WriteLine($"The elements:{Environment.NewLine}");
+
+            Tree.Elements.ToList().ForEach(p => Console.Out.WriteLine(p));
+
+            Console.Write(Environment.NewLine);
+        }
+
+        [Command("metals")]
+        private static void PrintMetals(params string[] options)
+        {
+            Console.WriteLine($"The metals:{Environment.NewLine}");
+
+            Tree.Metals.ToList().ForEach(p => Console.Out.WriteLine(p));
+
+            Console.Write(Environment.NewLine);
         }
 
         [Command("planets")]
         private static void PrintPlanets(params string[] options)
         {
+            var temp = Tree.Planets.ToList();
+
             Console.WriteLine($"The planets:{Environment.NewLine}");
 
             var showPath = false;
@@ -205,7 +220,8 @@ namespace TreeOfLife.Cli
             Console.Write(Environment.NewLine);
         }
 
-        private static void RecreateDatabase()
+        [Command("reset")]
+        private static void RecreateDatabase(params string[] options)
         {
             IKernel kernel = new StandardKernel(new LogicModule(), new DataModule());
 
@@ -215,11 +231,17 @@ namespace TreeOfLife.Cli
             var elementRepository = kernel.Get<IElementRepository>();
             elementRepository.StoreData();
 
+            var metalRepository = kernel.Get<IMetalRepository>();
+            metalRepository.StoreData();
+
             var hebrewLetterRepository = kernel.Get<IHebrewLetterRepository>();
             hebrewLetterRepository.StoreData();
 
             var pathRepository = kernel.Get<IPathRepository>();
             pathRepository.StoreData();
+
+            var planetRepository = kernel.Get<IPlanetRepository>();
+            planetRepository.StoreData();
 
             var sephiraReposirory = kernel.Get<ISephiraRepository>();
             sephiraReposirory.StoreData();

@@ -42,5 +42,11 @@ namespace TreeOfLife.Web.Controllers
 
             return View(planetsWithPaths);
         }
+        public ActionResult PlanetaryMetals()
+        {
+            var planetsWithMetals = PlanetRepository.ReadAll().Select(planet => planet.GetPlanetWithMetal()).ToList();
+
+            return View(planetsWithMetals);
+        }
     }
 }

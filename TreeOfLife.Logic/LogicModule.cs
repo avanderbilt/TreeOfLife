@@ -24,6 +24,8 @@ namespace TreeOfLife.Logic
             Bind<ITreeUtilities>().To<TreeUtilities>();
             Bind<IZodiacSignFactory>().ToFactory();
             Bind<IZodiacSignRepository>().To<ZodiacSignRepository>();
+            Bind<IMetalFactory>().ToFactory();
+            Bind<IMetalRepository>().To<MetalRepository>();
         }
     }
 }

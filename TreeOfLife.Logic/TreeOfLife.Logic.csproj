@@ -52,12 +52,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataModule.cs" />
+    <Compile Include="Factories\IMetalFactory.cs" />
     <Compile Include="Factories\IElementFactory.cs" />
     <Compile Include="Factories\IHebrewLetterFactory.cs" />
     <Compile Include="Factories\IPlanetFactory.cs" />
     <Compile Include="Factories\ISephiraFactory.cs" />
     <Compile Include="Factories\IZodiacSignFactory.cs" />
     <Compile Include="Factories\IPathFactory.cs" />
+    <Compile Include="Repositories\MetalRepository.cs" />
     <Compile Include="Repositories\ElementRepository.cs" />
     <Compile Include="Repositories\HebrewLetterRepository.cs" />
     <Compile Include="Repositories\PathRepository.cs" />

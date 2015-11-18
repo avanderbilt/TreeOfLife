@@ -1,0 +1,49 @@
+﻿@model IEnumerable<TreeOfLife.Model.PathWithHebrewLetter>
+
+@{
+    ViewBag.Title = "PathList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PathList</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Path.Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HebrewLetter.Letter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HebrewLetter.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TerminalSephiroth.From)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TerminalSephiroth.To)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Path.Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HebrewLetter.Letter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HebrewLetter.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TerminalSephiroth.From.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TerminalSephiroth.To.Name)
+        </td>
+    </tr>
+}
+
+</table>

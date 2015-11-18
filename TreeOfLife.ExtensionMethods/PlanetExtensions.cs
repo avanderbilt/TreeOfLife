@@ -29,5 +29,18 @@ namespace TreeOfLife.ExtensionMethods
                 TerminalSephiroth = terminalSephiroth
             };
         }
+        public static PlanetWithMetal GetPlanetWithMetal(this Planet planet)
+        {
+            var metalRepository = Kernel.Get<IMetalRepository>();
+            var metals = metalRepository.ReadAll().ToList();
+            var planetPath = metals.FirstOrDefault(p => p.KeyScale == planet.KeyScale);
+
+            return new PlanetWithMetal
+            {
+                Planet = planet,
+                Metal = planetPath
+            };
+        }
+
     }
 }

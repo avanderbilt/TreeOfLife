@@ -1,4 +1,6 @@
-﻿namespace TreeOfLife.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TreeOfLife.Model
 {
     public class ZodiacSign : Entity
     {
@@ -8,7 +10,9 @@
             Name = name;
         }
 
+        [Display(Name = "Zodiacal Glyph")]
         public char Glyph { get; set; }
+        [Display(Name = "Zodiac Sign")]
         public string Name { get; set; }
 
         public override string ToString()

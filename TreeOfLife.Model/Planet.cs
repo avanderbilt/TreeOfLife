@@ -1,4 +1,6 @@
-﻿namespace TreeOfLife.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TreeOfLife.Model
 {
     public class Planet : Entity
     {
@@ -8,7 +10,9 @@
             Name = name;
         }
 
+        [Display(Name = "Planetary Glyph")]
         public char Glyph { get; set; }
+        [Display(Name = "Planet")]
         public string Name { get; set; }
 
         public override string ToString()
