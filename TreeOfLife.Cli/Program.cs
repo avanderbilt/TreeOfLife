@@ -17,7 +17,17 @@ namespace TreeOfLife.Cli
 
         static Program()
         {
+            RecreateDatabase();
+
+            //return;
+
             IKernel kernel = new StandardKernel(new LogicModule(), new DataModule());
+
+            var elementRepository = kernel.Get<IElementRepository>();
+            var elements = elementRepository.ReadAll().ToList();
+
+            return;
+
             Tree = kernel.Get<ITree>();
 
             CommandMethods =
@@ -57,7 +67,8 @@ namespace TreeOfLife.Cli
                 {
                     if (command == null)
                     {
-                        parsingErrors.Add($"An argument, \"{argument}\", was found with no command to associate it with.");
+                        parsingErrors.Add(
+                            $"An argument, \"{argument}\", was found with no command to associate it with.");
                         continue;
                     }
 
@@ -192,6 +203,29 @@ namespace TreeOfLife.Cli
             Tree.Paths.ToList().ForEach(p => Console.Out.WriteLine(p.GetPathWithHebrewLetter()));
 
             Console.Write(Environment.NewLine);
+        }
+
+        private static void RecreateDatabase()
+        {
+            IKernel kernel = new StandardKernel(new LogicModule(), new DataModule());
+
+            var db = kernel.Get<ITreeOfLifeDatabase>();
+            db.HardDeletDatabase();
+
+            var elementRepository = kernel.Get<IElementRepository>();
+            elementRepository.StoreData();
+
+            var hebrewLetterRepository = kernel.Get<IHebrewLetterRepository>();
+            hebrewLetterRepository.StoreData();
+
+            var pathRepository = kernel.Get<IPathRepository>();
+            pathRepository.StoreData();
+
+            var sephiraReposirory = kernel.Get<ISephiraRepository>();
+            sephiraReposirory.StoreData();
+
+            var zodiacSignRepository = kernel.Get<IZodiacSignRepository>();
+            zodiacSignRepository.StoreData();
         }
     }
 }

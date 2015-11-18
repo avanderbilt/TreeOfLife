@@ -2,7 +2,7 @@
 {
     public class Planet : Entity
     {
-        public Planet(string id, int keyScale, int number, string name, char glyph) : base(id, keyScale, number)
+        public Planet(string id, int keyScale, string name, char glyph) : base(id, keyScale)
         {
             Glyph = glyph;
             Name = name;

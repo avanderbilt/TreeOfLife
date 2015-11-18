@@ -18,13 +18,13 @@ namespace TreeOfLife.Logic.Repositories
 
             _planets = new ReadOnlyCollection<Planet>(new List<Planet>
             {
-                planetFactory.Create("Planets/1", 12, 8, "Mercury", '\u263F'),
-                planetFactory.Create("Planets/2", 13, 9, "Moon", '\u263E'),
-                planetFactory.Create("Planets/3", 14, 7, "Venus", '\u2640'),
-                planetFactory.Create("Planets/4", 21, 4, "Jupiter", '\u2643'),
-                planetFactory.Create("Planets/5", 27, 5, "Mars", '\u2642'),
-                planetFactory.Create("Planets/6", 30, 6, "Sun", '\u2609'),
-                planetFactory.Create("Planets/7", 32, 3, "Saturn", '\u2644')
+                planetFactory.Create("Planets/1", 12, "Mercury", '\u263F'),
+                planetFactory.Create("Planets/2", 13, "Moon", '\u263E'),
+                planetFactory.Create("Planets/3", 14, "Venus", '\u2640'),
+                planetFactory.Create("Planets/4", 21, "Jupiter", '\u2643'),
+                planetFactory.Create("Planets/5", 27, "Mars", '\u2642'),
+                planetFactory.Create("Planets/6", 30, "Sun", '\u2609'),
+                planetFactory.Create("Planets/7", 32, "Saturn", '\u2644')
             });
         }
 
@@ -35,7 +35,7 @@ namespace TreeOfLife.Logic.Repositories
 
         public IEnumerable<Planet> ReadAll()
         {
-            return _session.Query<Planet>().OrderBy(l => l.Number);
+            return _session.Query<Planet>().OrderBy(p => p.Name);
         }
 
         public void StoreData()

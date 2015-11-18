@@ -2,7 +2,7 @@
 {
     public class ZodiacSign : Entity
     {
-        public ZodiacSign(string id, int keyScale, int number, string name, char glyph) : base(id, keyScale, number)
+        public ZodiacSign(string id, int keyScale, string name, char glyph) : base(id, keyScale)
         {
             Glyph = glyph;
             Name = name;

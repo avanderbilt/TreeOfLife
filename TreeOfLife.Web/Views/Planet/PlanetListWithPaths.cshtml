@@ -1,0 +1,57 @@
+﻿@using TreeOfLife.ExtensionMethods
+@model IEnumerable<TreeOfLife.Model.PlanetWithPath>
+
+@{
+    ViewBag.Title = "PlanetListWithPaths";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PlanetListWithPaths</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Planet.Glyph)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Planet.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Path.GetPathWithHebrewLetter().HebrewLetter.Letter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Path.GetPathWithHebrewLetter().HebrewLetter.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Path.GetTerminalSephiroth().From)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Path.GetTerminalSephiroth().To)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Planet.Glyph)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Planet.Name)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.Path.GetPathWithHebrewLetter().HebrewLetter.Letter)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.Path.GetPathWithHebrewLetter().HebrewLetter.Name)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.Path.GetTerminalSephiroth().From.Name)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.Path.GetTerminalSephiroth().To.Name)
+            </th>
+        </tr>
+    }
+
+</table>

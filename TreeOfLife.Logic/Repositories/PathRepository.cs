@@ -50,7 +50,7 @@ namespace TreeOfLife.Logic.Repositories
 
         public IEnumerable<Path> ReadAll()
         {
-            return _session.Query<Path>().OrderBy(s => s.Number);
+            return _session.Query<Path>().OrderBy(p => p.Number);
         }
 
         public void StoreData()

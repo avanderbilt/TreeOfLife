@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeOfLife.Logic", "TreeOfL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeOfLife.ExtensionMethods", "TreeOfLife.ExtensionMethods\TreeOfLife.ExtensionMethods.csproj", "{F12C0C61-95B4-407F-81C6-1157637885CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeOfLife.Web", "TreeOfLife.Web\TreeOfLife.Web.csproj", "{C838D973-C2EB-4575-BCBB-FEF1524FC753}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeOfLife.Resources", "TreeOfLife.Resources\TreeOfLife.Resources.csproj", "{68426656-FC4D-4CA8-B72A-05EA2BF5AEF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{F12C0C61-95B4-407F-81C6-1157637885CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F12C0C61-95B4-407F-81C6-1157637885CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F12C0C61-95B4-407F-81C6-1157637885CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C838D973-C2EB-4575-BCBB-FEF1524FC753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C838D973-C2EB-4575-BCBB-FEF1524FC753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C838D973-C2EB-4575-BCBB-FEF1524FC753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C838D973-C2EB-4575-BCBB-FEF1524FC753}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68426656-FC4D-4CA8-B72A-05EA2BF5AEF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68426656-FC4D-4CA8-B72A-05EA2BF5AEF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68426656-FC4D-4CA8-B72A-05EA2BF5AEF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68426656-FC4D-4CA8-B72A-05EA2BF5AEF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

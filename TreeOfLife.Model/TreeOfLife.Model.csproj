@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,8 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Element.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="HebrewLetter.cs" />
+    <Compile Include="Interfaces\IElementRepository.cs" />
     <Compile Include="Interfaces\IHebrewLetterRepository.cs" />
     <Compile Include="Interfaces\IPathRepository.cs" />
     <Compile Include="Interfaces\IPlanetRepository.cs" />

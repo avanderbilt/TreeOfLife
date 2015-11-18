@@ -10,18 +10,20 @@ namespace TreeOfLife.Logic
     {
         public override void Load()
         {
-            Bind<IHebrewLetterRepository>().To<HebrewLetterRepository>();
-            Bind<IPathRepository>().To<PathRepository>();
-            Bind<IPlanetRepository>().To<PlanetRepository>();
-            Bind<ISephiraRepository>().To<SephiraRepository>();
-            Bind<IZodiacSignRepository>().To<ZodiacSignRepository>();
-            Bind<IPathFactory>().ToFactory();
-            Bind<IPlanetFactory>().ToFactory();
+            Bind<IElementFactory>().ToFactory();
+            Bind<IElementRepository>().To<ElementRepository>();
             Bind<IHebrewLetterFactory>().ToFactory();
+            Bind<IHebrewLetterRepository>().To<HebrewLetterRepository>();
+            Bind<IPathFactory>().ToFactory();
+            Bind<IPathRepository>().To<PathRepository>();
+            Bind<IPlanetFactory>().ToFactory();
+            Bind<IPlanetRepository>().To<PlanetRepository>();
             Bind<ISephiraFactory>().ToFactory();
-            Bind<IZodiacSignFactory>().ToFactory();
-            Bind<ITreeUtilities>().To<TreeUtilities>();
+            Bind<ISephiraRepository>().To<SephiraRepository>();
             Bind<ITree>().To<Tree>();
+            Bind<ITreeUtilities>().To<TreeUtilities>();
+            Bind<IZodiacSignFactory>().ToFactory();
+            Bind<IZodiacSignRepository>().To<ZodiacSignRepository>();
         }
     }
 }
